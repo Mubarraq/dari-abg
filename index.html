@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ucapan Bucin untuk Tasha Musanna</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #f3d1f1, #ffb3d9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .title {
+      font-size: 36px;
+      color: #ff5c8f;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+    }
+
+    .message {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .heart {
+      font-size: 50px;
+      color: #ff5c8f;
+      margin: 20px 0;
+    }
+
+    .footer {
+      font-size: 18px;
+      color: #555;
+      font-style: italic;
+    }
+
+    /* Animasi untuk tombol Klik Disini */
+    .click-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #ff5c8f;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .click-btn:hover {
+      transform: scale(1.1);
+      background-color: #ff4081;
+    }
+
+    /* Animasi tombol saat hover */
+    .click-btn:active {
+      transform: scale(1);
+      background-color: #e0407c;
+    }
+
+    /* Animasi love yang muncul saat tombol di klik */
+    .love-animation {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      color: #ff5c8f;
+      animation: loveAnim 2s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes loveAnim {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3);
+      }
+    }
+
+    /* Background dengan animasi bintang */
+    .star {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2017/08/30/01/26/space-2695569_960_720.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: stars 30s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes stars {
+      0% { background-position: 0 0; }
+      100% { background-position: 20000px 20000px; }
+    }
+
+    /* Pesan gombal */
+    .gombal-message {
+      display: none;
+      font-size: 24px;
+      color: #ff5c8f;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="star"></div>
+  <div class="container">
+    <h1 class="title">Untuk Tasha Musanna</h1>
+    <p class="message">
+      Keng, yang semangat beh bek hana pah ule hy sogel antek. 
+      <br>roneh tari neh, baik budi lom . 
+      <br>sayang adx! 💖
+    </p>
+    <div class="heart">&#10084;&#65039;</div>
+    <p class="footer">Selalu jadi baik keng beh, Tasha.</p>
+    <!-- Tombol "Klik Disini" -->
+    <a href="#" class="click-btn" id="click-btn">ci neuteken dx</a>
+
+    <!-- Pesan gombal -->
+    <p class="gombal-message" id="gombal-message">buah manggis buah kedodong dong yang paling cantik si keng dong. 💫</p>
+  </div>
+
+  <!-- Animasi Love -->
+  <div class="love-animation" id="love-animation">&#10084;</div>
+
+  <script>
+    document.getElementById('click-btn').addEventListener('click', function(event) {
+      event.preventDefault();  // Mencegah link membuka halaman lain
+      var loveAnim = document.getElementById('love-animation');
+      var gombalMessage = document.getElementById('gombal-message');
+      
+      // Menampilkan animasi love
+      loveAnim.style.animation = 'loveAnim 2s infinite';
+      
+      // Menampilkan pesan gombal setelah klik
+      gombalMessage.style.display = 'block';
+
+      // Menghapus animasi setelah selesai
+      setTimeout(function() {
+        loveAnim.style.animation = '';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
